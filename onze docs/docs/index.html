@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onze Docs — Portal de Faturamento</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ─── Header ──────────────────────────────── -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-left">
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <a href="#primeiro-acesso" class="logo">
+        <span class="logo-icon">O</span>
+        Onze Docs
+      </a>
+    </div>
+    <div class="header-right">
+      <a href="https://previdencia-icatu.onze.com.br" target="_blank" class="btn-portal">Abrir Portal</a>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Layout ──────────────────────────────── -->
+<div class="sidebar-overlay"></div>
+<div class="layout">
+  <div class="layout-inner">
+
+    <nav class="sidebar">
+      <div class="sidebar-group">
+        <div class="sidebar-heading">Acesso</div>
+        <a class="sidebar-link" data-page="primeiro-acesso" href="#primeiro-acesso">Primeiro acesso</a>
+        <a class="sidebar-link" data-page="esqueci-senha" href="#esqueci-senha">Esqueci a senha</a>
+        <a class="sidebar-link" data-page="convidar-membro" href="#convidar-membro">Convidar membro</a>
+      </div>
+      <div class="sidebar-group">
+        <div class="sidebar-heading">Faturamento</div>
+        <a class="sidebar-link" data-page="busca-filtros" href="#busca-filtros">Busca e filtros</a>
+        <a class="sidebar-link" data-page="abertura-ticket" href="#abertura-ticket">Abertura de ticket</a>
+        <a class="sidebar-link" data-page="fluxo-completo" href="#fluxo-completo">Fluxo completo</a>
+        <a class="sidebar-link" data-page="pedidos-funcionarios" href="#pedidos-funcionarios">Pedidos</a>
+        <a class="sidebar-link" data-page="substituir-previa" href="#substituir-previa">Substituir prévia</a>
+        <a class="sidebar-link" data-page="erros-upload" href="#erros-upload">Erros de upload</a>
+        <a class="sidebar-link" data-page="resolucao-criticas" href="#resolucao-criticas">Resolução de críticas</a>
+      </div>
+      <div class="sidebar-group">
+        <div class="sidebar-heading">Configurações</div>
+        <a class="sidebar-link" data-page="grupos-empresas" href="#grupos-empresas">Grupos e empresas</a>
+        <a class="sidebar-link" data-page="ciclo-faturamento" href="#ciclo-faturamento">Ciclo de faturamento</a>
+        <a class="sidebar-link" data-page="notificacoes" href="#notificacoes">Notificações</a>
+      </div>
+    </nav>
+
+    <div class="main">
+
+    <!-- ============================================================ -->
+    <!-- PRIMEIRO ACESSO                                              -->
+    <!-- ============================================================ -->
+    <article id="primeiro-acesso" class="page">
+      <h1>Primeiro acesso</h1>
+      <p class="page-subtitle">Como cada tipo de usuário acessa o Portal de Faturamento pela primeira vez.</p>
+
+      <p>O Portal de Faturamento é acessado exclusivamente por convite — não existe cadastro público. A experiência de primeiro acesso é diferente dependendo do tipo de usuário.</p>
+
+      <h2>Usuários Icatu <span class="tag tag-insurer">ICATU</span></h2>
+      <p>Os colaboradores da Icatu <strong>não são convidados pelo portal</strong>. O acesso é feito via <strong>SSO (Single Sign-On)</strong> — o login institucional da Icatu.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Acesse o portal</h4>
+            <p>Navegue até <a href="https://previdencia-icatu.onze.com.br" target="_blank">previdencia-icatu.onze.com.br</a>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Informe seu email institucional</h4>
+            <p>Na tela de login, digite seu email <code>@icatuseguros.com.br</code> e clique em "Avançar".</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Autenticação SSO</h4>
+            <p>O sistema redireciona para o ambiente de autenticação da Icatu. Em alguns casos, a tela de login pode abrir em uma nova aba do navegador.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Acesso validado</h4>
+            <p>Ao concluir a autenticação, você é redirecionado de volta ao portal com acesso liberado. O perfil (<code>admin</code>, <code>filial</code> ou <code>analista</code>) e a filial regional são mapeados automaticamente a partir do sistema da Icatu.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Problemas com login SSO?</div>
+        <p>Se a aba de autenticação não abrir, verifique se o navegador está bloqueando pop-ups. Problemas com usuário ou senha Icatu devem ser tratados pelo <strong>suporte interno da Icatu</strong>, não pelo suporte do portal.</p>
+      </div>
+
+      <h3>Perfis Icatu e filiais regionais</h3>
+      <p>O SSO mapeia automaticamente o perfil do colaborador com base no seu grupo no sistema interno da Icatu:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Grupo IDP</th><th>Perfil no portal</th></tr></thead>
+          <tbody>
+            <tr><td>Administrador</td><td><code>admin-icatu</code></td></tr>
+            <tr><td>Analista</td><td><code>analista-icatu</code></td></tr>
+            <tr><td>Filial_SP, Filial_RJ_ES, Filial_MG, Filial_DF_CO, Filial_Sul, Filial_Norte, Filial_NE</td><td><code>filial-icatu</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Usuários RH <span class="tag tag-company">EMPRESA</span></h2>
+      <p>Os usuários de empresa (RH) precisam receber um <strong>convite por email</strong> de um usuário que tenha permissão para convidar (veja <a href="#convidar-membro">Convidar membro</a>).</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Receba o convite</h4>
+            <p>O usuário RH recebe um email com um link para concluir o cadastro.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Defina sua senha</h4>
+            <p>Ao clicar no link, o sistema direciona para a tela de primeiro acesso, onde o usuário cria sua senha definitiva.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Faça login</h4>
+            <p>Com a conta ativada, o login é feito com email e senha na página do portal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Importante</div>
+        <p>O acesso do usuário RH é restrito aos <strong>contratos definidos no momento do convite</strong>. Se o RH precisar acessar mais contratos, um novo convite (com escopo ampliado) deve ser enviado.</p>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- ESQUECI A SENHA                                              -->
+    <!-- ============================================================ -->
+    <article id="esqueci-senha" class="page">
+      <h1>Esqueci a senha</h1>
+      <p class="page-subtitle">Recuperação de senha para usuários RH. Usuários Icatu usam o SSO institucional.</p>
+
+      <h2>Usuários RH <span class="tag tag-company">EMPRESA</span></h2>
+      <p>A recuperação de senha se aplica <strong>apenas a usuários do tipo RH</strong>, que possuem credenciais próprias no portal.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Acesse "Esqueci minha senha"</h4>
+            <p>Na tela de login do portal, clique no link <strong>"Esqueci minha senha"</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Informe o email cadastrado</h4>
+            <p>Digite o email usado no momento do convite e cadastro.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Acesse o link de redefinição</h4>
+            <p>Um email será enviado com instruções de redefinição. O link é válido por <strong>24 horas</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Crie a nova senha</h4>
+            <p>Ao clicar no link, defina sua nova senha e faça login normalmente.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Usuários Icatu <span class="tag tag-insurer">ICATU</span></h2>
+      <p>Colaboradores da Icatu acessam via <strong>SSO</strong> (login institucional). Se houver problemas com a senha, a recuperação deve ser feita pelo <strong>suporte de TI interno da Icatu</strong>, não pelo portal de faturamento.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Dica para suporte</div>
+        <p>Quando um usuário RH relatar que não consegue redefinir a senha, verifique: (1) se o link ainda está válido (24h), (2) se o email informado é o mesmo usado no cadastro, e (3) se o email não caiu na caixa de spam.</p>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- CONVIDAR MEMBRO                                              -->
+    <!-- ============================================================ -->
+    <article id="convidar-membro" class="page">
+      <h1>Convidar membro</h1>
+      <p class="page-subtitle">Quem pode convidar, quais funções atribuir e como funciona o controle de acesso por contrato.</p>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Regra fundamental</div>
+        <p>Usuários Icatu <strong>não são convidados</strong> pelo portal — eles acessam via SSO. O fluxo de convite serve exclusivamente para adicionar <strong>usuários RH</strong> (empresa) ao portal.</p>
+      </div>
+
+      <h2>Quem pode convidar</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Quem convida</th><th>Pode convidar</th><th>Funções permitidas para o convidado</th><th>Pode editar/excluir</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tag tag-insurer">admin-icatu</span></td>
+              <td>Usuários RH</td>
+              <td><code>admin</code>, <code>analista</code>, <code>parceiro</code></td>
+              <td>Sim</td>
+            </tr>
+            <tr>
+              <td><span class="tag tag-insurer">filial-icatu</span></td>
+              <td>Usuários RH</td>
+              <td><code>admin</code>, <code>analista</code>, <code>parceiro</code></td>
+              <td>Não</td>
+            </tr>
+            <tr>
+              <td><span class="tag tag-insurer">analista-icatu</span></td>
+              <td>—</td>
+              <td>—</td>
+              <td>Não</td>
+            </tr>
+            <tr>
+              <td><span class="tag tag-company">admin-empresa</span></td>
+              <td>Outros usuários RH</td>
+              <td><code>admin</code>, <code>analista</code>, <code>parceiro</code></td>
+              <td>Sim</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Como convidar</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Acesse "Configurações &gt; Usuários do portal" no menu lateral</h4>
+            <p>Na lista de usuários, clique no botão <strong>"+ Novo usuário"</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Preencha os dados do convite</h4>
+            <p>Informe: <strong>nome completo</strong>, <strong>email</strong> e <strong>função</strong> (admin, analista ou parceiro).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Defina o escopo de acesso</h4>
+            <p>Selecione os <strong>grupos</strong>, <strong>empresas</strong> e <strong>contratos</strong> que o novo usuário poderá visualizar e operar.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Envie o convite</h4>
+            <p>Clique em <strong>"Enviar"</strong>. O usuário receberá um email com instruções para criar a senha e acessar o portal.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Funções disponíveis para usuários RH</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Função</th><th>Descrição</th><th>Pode convidar outros</th></tr></thead>
+          <tbody>
+            <tr><td><code>admin</code></td><td>Administrador RH — acesso completo aos contratos permitidos, pode gerenciar outros membros RH</td><td>Sim</td></tr>
+            <tr><td><code>analista</code></td><td>Analista RH — acesso operacional ao faturamento, sem gestão de usuários</td><td>Não</td></tr>
+            <tr><td><code>parceiro</code></td><td>Parceiro / Consultor — mesmas permissões operacionais do analista</td><td>Não</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Restrições importantes</div>
+        <ul>
+          <li>Emails <code>@icatuseguros.com.br</code> <strong>não podem</strong> ser usados para convites.</li>
+          <li>Só é possível atribuir acesso a contratos que <strong>você mesmo tem acesso</strong>.</li>
+          <li>Apenas quem tem acesso universal (<code>*</code>) pode atribuir acesso universal a outro usuário.</li>
+          <li>Não é permitido editar ou excluir <strong>a própria conta</strong>.</li>
+        </ul>
+      </div>
+
+      <h2>Boas práticas</h2>
+      <ul>
+        <li>Convide apenas quem precisa consultar ou operar faturamentos.</li>
+        <li>Revise periodicamente a lista de membros e remova acessos obsoletos.</li>
+        <li>Ao definir o escopo, escolha <strong>apenas os contratos necessários</strong> — evite acesso universal quando não é requerido.</li>
+      </ul>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- BUSCA E FILTROS                                              -->
+    <!-- ============================================================ -->
+    <article id="busca-filtros" class="page">
+      <h1>Busca e filtros</h1>
+      <p class="page-subtitle">Como encontrar faturamentos na lista principal e usar os filtros avançados.</p>
+
+      <h2>Lista de faturamentos</h2>
+      <p>A tela principal do portal exibe todos os faturamentos em formato de tabela. Cada linha representa um ticket de faturamento com as seguintes informações:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Coluna</th><th>Descrição</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Mês/Ano</strong></td><td>Competência do faturamento</td></tr>
+            <tr><td><strong>Grupo</strong></td><td>Grupo empresarial</td></tr>
+            <tr><td><strong>CNPJ</strong></td><td>CNPJ da empresa</td></tr>
+            <tr><td><strong>Tipo</strong></td><td>Regular ou Complementar</td></tr>
+            <tr><td><strong>Responsáveis</strong></td><td>Colaboradores Icatu designados ao faturamento</td></tr>
+            <tr><td><strong>Status</strong></td><td>Etapa atual do processo (ex: Em validação RH, Em processamento)</td></tr>
+            <tr><td><strong>Prazo</strong></td><td>Prazo limite da etapa atual, conforme parametrização</td></tr>
+            <tr><td><strong>Data de criação</strong></td><td>Data de abertura do ticket</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Filtros disponíveis</h2>
+      <p>Na barra superior da lista, é possível filtrar por qualquer coluna: <strong>datas</strong>, <strong>CNPJ</strong>, <strong>grupo</strong>, <strong>status</strong> e <strong>responsáveis</strong>. As colunas também permitem ordenação crescente e decrescente.</p>
+
+      <h2>Indicadores gerenciais <span class="tag tag-insurer">SOMENTE ICATU</span></h2>
+      <p>Acima da lista, usuários Icatu visualizam indicadores gerenciais que mostram:</p>
+      <ul>
+        <li>Número total de faturamentos <strong>em andamento</strong></li>
+        <li>Quantidade de faturamentos <strong>atrasados</strong> por etapa</li>
+      </ul>
+      <p>É possível clicar no ícone ao lado dos números para filtrar a lista diretamente pelo indicador — útil para priorizar a gestão no dia a dia.</p>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Visibilidade</div>
+        <p>Os indicadores gerenciais <strong>não são exibidos</strong> para usuários RH. Eles enxergam apenas a lista de faturamentos dos contratos aos quais têm acesso.</p>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- ABERTURA DE TICKET                                           -->
+    <!-- ============================================================ -->
+    <article id="abertura-ticket" class="page">
+      <h1>Abertura de ticket</h1>
+      <p class="page-subtitle">Como criar um novo faturamento e quem pode fazê-lo.</p>
+
+      <h2>Quem pode criar tickets</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Tipo de ticket</th><th>Quem pode criar</th><th>Observações</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Regular</strong></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">filial-icatu</span> <span class="tag tag-insurer">analista-icatu</span></td>
+              <td>Apenas Icatu. Pode ser criado manualmente ou via abertura automática</td>
+            </tr>
+            <tr>
+              <td><strong>Complementar</strong></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">filial-icatu</span> <span class="tag tag-insurer">analista-icatu</span> <span class="tag tag-company">admin-empresa</span> <span class="tag tag-company">analista-empresa</span> <span class="tag tag-company">parceiro-empresa</span></td>
+              <td>Quando RH cria, o preenchimento de <strong>motivo é obrigatório</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Atenção</div>
+        <p>Usuários RH <strong>nunca podem</strong> criar tickets regulares. Para faturamentos regulares, a abertura é sempre responsabilidade da Icatu.</p>
+      </div>
+
+      <h2>Criação manual</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Clique em "Novo faturamento +"</h4>
+            <p>Na lista de faturamentos, clique no botão no canto superior direito.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Preencha o formulário</h4>
+            <p>Informe: <strong>Tipo de Faturamento</strong> (Regular ou Complementar), <strong>Grupo</strong>, <strong>Empresa (CNPJ)</strong> e <strong>Contratos</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Aguarde a geração das prévias</h4>
+            <p>O sistema cria o ticket e gera automaticamente as prévias de faturamento por contrato. Após alguns instantes, as prévias ficam disponíveis e o ticket avança no fluxo.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Criação automática</h2>
+      <p>É possível configurar grupos empresariais para que os tickets de faturamento regular sejam abertos automaticamente todo mês. Essa configuração é feita no menu <strong>Configurações</strong>.</p>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- FLUXO COMPLETO                                               -->
+    <!-- ============================================================ -->
+    <article id="fluxo-completo" class="page">
+      <h1>Fluxo completo</h1>
+      <p class="page-subtitle">Visão geral de todas as etapas do faturamento, responsáveis em cada fase, ações disponíveis por perfil e as diferenças entre o fluxo regular e complementar.</p>
+
+      <h2>Fluxo regular</h2>
+      <p>Após a abertura, o ticket de faturamento regular percorre as seguintes etapas até a disponibilização do kit:</p>
+
+      <div class="workflow-diagram">
+        <span class="wf-step wf-step-system">Abertura</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-system">Gerando prévias</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-system">Pré-validação</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-company">Validação RH</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-insurer">Em processamento</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-system">Aguardando Kit</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-company">Kit disponível</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Etapa</th><th>Responsável</th><th>O que acontece</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Abertura</strong></td>
+              <td><span class="tag tag-system">SISTEMA</span></td>
+              <td>Ticket é criado e as prévias de faturamento são geradas automaticamente por contrato.</td>
+            </tr>
+            <tr>
+              <td><strong>Pré-validação</strong></td>
+              <td><span class="tag tag-system">SISTEMA</span></td>
+              <td>O sistema analisa as prévias geradas no momento da abertura e aponta automaticamente eventuais críticas identificadas nas informações dos certificados.</td>
+            </tr>
+            <tr>
+              <td><strong>Validação RH</strong></td>
+              <td><span class="tag tag-company">EMPRESA</span></td>
+              <td>O RH analisa as prévias e as críticas apontadas pelo sistema. Pode substituir prévias, resolver críticas e, ao concluir, enviar o faturamento para a Icatu.</td>
+            </tr>
+            <tr>
+              <td><strong>Em processamento</strong></td>
+              <td><span class="tag tag-insurer">ICATU</span></td>
+              <td>A Icatu processa o faturamento: pode reprocessar críticas, resolver críticas pendentes em caráter excepcional, devolver para o RH, exportar relatórios finais ou marcar o início da emissão de fatura.</td>
+            </tr>
+            <tr>
+              <td><strong>Aguardando Kit</strong></td>
+              <td><span class="tag tag-system">SISTEMA</span></td>
+              <td>Fatura emitida no Sistema Produto da Icatu. O sistema aguarda o kit de faturamento (boletos e demonstrativos) ser disponibilizado via SFTP.</td>
+            </tr>
+            <tr>
+              <td><strong>Kit disponível</strong></td>
+              <td><span class="tag tag-company">EMPRESA</span></td>
+              <td>Kit de faturamento disponível para download. A Empresa deve baixar os boletos e demonstrativos para providenciar o pagamento.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Ações por usuário</h2>
+      <p>A tabela abaixo resume quais ações cada perfil de usuário pode realizar ao longo do fluxo de faturamento regular.</p>
+      <div class="table-wrapper">
+        <table class="matrix-table">
+          <thead><tr><th>Ação</th><th>admin-icatu</th><th>filial-icatu</th><th>analista-icatu</th><th>admin-empresa</th><th>analista-empresa</th><th>parceiro-empresa</th></tr></thead>
+          <tbody>
+            <tr><td>Criar ticket regular</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Criar ticket complementar</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Cancelar ticket</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Upload/substituir prévia (Validação RH)</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td></tr>
+            <tr><td>Upload/substituir prévia (Em processamento)</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Resolver críticas (Validação RH)</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td></tr>
+            <tr><td>Resolver críticas (Em processamento)</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Reprocessar críticas</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Enviar para Icatu</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td></tr>
+            <tr><td>Puxar para a Icatu</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Devolver para RH</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Emitir fatura</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Exportar/baixar relatórios</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-check">✓</td><td class="cell-dash">—</td><td class="cell-dash">—</td><td class="cell-dash">—</td></tr>
+            <tr><td>Download prévia</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td></tr>
+            <tr><td>Download kit</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td><td class="cell-check">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Fluxo complementar</h2>
+      <p>O faturamento complementar é utilizado quando há necessidade de ajustar ou complementar valores de contribuição de participantes que deveriam ter sido incluídos em um faturamento regular anterior. Esse tipo de ticket atende cenários como correções retroativas, inclusões pontuais e acertos de valores.</p>
+
+      <h3>Diferenças em relação ao fluxo regular</h3>
+      <p>Diferente do faturamento regular, o ticket complementar <strong>não gera prévias automaticamente</strong>. Ao ser criado, o sistema disponibiliza para download um <strong>modelo de prévia em branco</strong> (template), que deve ser preenchido manualmente pelo RH.</p>
+
+      <div class="workflow-diagram">
+        <span class="wf-step wf-step-system">Abertura</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-company">Validação RH</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-insurer">Em processamento</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-system">Aguardando Kit</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-step wf-step-company">Kit disponível</span>
+      </div>
+
+      <ul>
+        <li>O ticket é criado e vai diretamente para a etapa <strong>Validação RH</strong>, pulando "Gerando prévias" e "Pré-validação".</li>
+        <li>O sistema disponibiliza um <strong>modelo de prévia vazio</strong> para download. O RH deve baixar esse template e preenchê-lo <strong>somente com os participantes e certificados que necessitam de ajuste ou complemento</strong>.</li>
+        <li>Após preencher, o RH faz o upload da prévia preenchida no ticket, seguindo o mesmo processo de substituição de prévias do fluxo regular.</li>
+        <li>A partir do upload, o sistema valida o arquivo e aponta críticas normalmente. O restante do fluxo (resolução de críticas, envio para Icatu, processamento e emissão) segue o mesmo caminho do faturamento regular.</li>
+      </ul>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Prévia do complementar</div>
+        <p>A prévia do faturamento complementar deve conter <strong>apenas</strong> os certificados que precisam de correção ou complemento — não é necessário incluir todos os participantes do contrato. Inclua somente as linhas relevantes para o ajuste desejado.</p>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Motivo obrigatório para RH</div>
+        <p>Quando um usuário Empresa cria um ticket complementar, o preenchimento do campo <strong>motivo</strong> é obrigatório. Essa informação é utilizada pela equipe Icatu para acompanhar e validar a justificativa do faturamento complementar.</p>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- PEDIDOS DE FUNCIONÁRIOS                                      -->
+    <!-- ============================================================ -->
+    <article id="pedidos-funcionarios" class="page">
+      <h1>Pedidos de funcionários</h1>
+      <p class="page-subtitle">Como os pedidos originados no app do funcionário impactam o faturamento, como gerenciá-los no Portal e o papel do RH nesse processo.</p>
+
+      <h2>O que são pedidos de funcionários</h2>
+      <p>Pedidos de funcionários são <strong>solicitações feitas pelo colaborador no aplicativo</strong> (app do participante) que afetam diretamente o faturamento de previdência. Quando o funcionário realiza uma ação no app — como aderir ao plano, trocar de plano, editar sua contribuição ou suspendê-la —, essa solicitação é refletida automaticamente no Portal de Faturamento como um <strong>pedido</strong>.</p>
+      <p>Os pedidos ficam disponíveis no menu <strong>Pedidos</strong> do Portal e são aplicados automaticamente nas prévias de faturamento regular, alterando os valores de contribuição dos certificados correspondentes.</p>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Um pedido pendente por funcionário</div>
+        <p>Para cada funcionário, existe <strong>no máximo um pedido com status Pendente</strong> a ser aplicado no próximo faturamento. Esse pedido é sempre o <strong>último pedido concluído no app</strong>, pois representa a configuração atual do plano do funcionário. Se o funcionário fizer um novo pedido no app, os pedidos pendentes anteriores são automaticamente <strong>cancelados</strong> no Portal.</p>
+      </div>
+
+      <h2>Tipos de pedido</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Tipo</th><th>Descrição</th><th>Impacto na prévia</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Adesão</strong></td>
+              <td>Primeira adesão do funcionário ao plano de previdência. Novos certificados são criados.</td>
+              <td>Novos certificados e valores de contribuição são adicionados à prévia final.</td>
+            </tr>
+            <tr>
+              <td><strong>Troca de plano</strong></td>
+              <td>Funcionário troca de plano ou fundo de investimento. Os certificados antigos podem ser suspensos e novos criados.</td>
+              <td>Certificados antigos podem ter contribuição zerada (suspensão) e novos certificados com os novos valores são incluídos na prévia final.</td>
+            </tr>
+            <tr>
+              <td><strong>Edição de contribuição</strong></td>
+              <td>Funcionário altera o valor de contribuição de seus certificados existentes.</td>
+              <td>Valores de contribuição dos certificados são atualizados na prévia final conforme os novos valores do pedido.</td>
+            </tr>
+            <tr>
+              <td><strong>Suspensão</strong></td>
+              <td>Funcionário suspende a contribuição. Os certificados passam a ter contribuição zero.</td>
+              <td>Certificados do funcionário passam a ter contribuição R$ 0,00 na prévia final.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Status dos pedidos</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Status</th><th>Descrição</th><th>Quando ocorre</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Pendente</strong></td>
+              <td>Pedido criado, registrado e aguardando início do processamento do faturamento.</td>
+              <td>Logo após a solicitação ser concluída no app e registrada no Portal.</td>
+            </tr>
+            <tr>
+              <td><strong>Concluído</strong></td>
+              <td>Pedido foi aplicado ao faturamento e concluído pelo RH.</td>
+              <td>Alterado <strong>manualmente pelo RH</strong> após a emissão dos boletos, confirmando que o pedido foi incluído na fatura.</td>
+            </tr>
+            <tr>
+              <td><strong>Recusado</strong></td>
+              <td>Pedido não foi aplicado ao faturamento.</td>
+              <td>Alterado <strong>manualmente pelo RH</strong> antes da emissão dos boletos, quando o pedido não deve ser considerado naquele ciclo.</td>
+            </tr>
+            <tr>
+              <td><strong>Cancelado</strong></td>
+              <td>Pedido substituído por outro mais recente do mesmo funcionário.</td>
+              <td><strong>Automático</strong> — quando um novo pedido é realizado pelo funcionário no app, os pedidos pendentes anteriores são cancelados.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Impacto na prévia de faturamento</h2>
+      <p>Quando o faturamento regular é iniciado, o sistema gera as prévias de faturamento por contrato. A planilha de prévia é gerada com <strong>3 abas</strong>:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Aba</th><th>Descrição</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Prévia original</strong></td>
+              <td>Prévia gerada a partir dos <strong>arquivos diários da Icatu</strong>. Reflete os valores e certificados vigentes no sistema da Icatu após o último faturamento. Não contém valores que o RH escolheu aplicar apenas na prévia anterior — representa a "base sistêmica".</td>
+            </tr>
+            <tr>
+              <td><strong>Prévia final</strong></td>
+              <td>Prévia <strong>consolidada</strong> a partir da prévia original, acrescida dos pedidos pendentes de cada funcionário (quando houver). É a versão que será considerada para o processamento do faturamento.</td>
+            </tr>
+            <tr>
+              <td><strong>Movimentações</strong></td>
+              <td>Mapa de todos os pedidos que o sistema tentou aplicar na prévia, indicando quais foram aplicados com sucesso e quais não puderam ser aplicados. Permite ao RH rastrear exatamente quais pedidos foram refletidos no faturamento.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Lógica de consolidação da prévia final</h3>
+      <p>O sistema segue uma lógica específica para consolidar a prévia final a partir dos pedidos de funcionários:</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Busca os pedidos pendentes</h4>
+            <p>O sistema busca todos os pedidos com status <strong>Pendente</strong> vinculados aos contratos daquele faturamento.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Aplica os novos valores sobre a prévia original</h4>
+            <p>Para cada pedido, o sistema tenta aplicar os novos valores de contribuição dos certificados sobre a prévia original da Icatu.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Valida a existência dos certificados</h4>
+            <p>Se algum certificado do pedido com <strong>nova contribuição maior que zero</strong> não existir na prévia original, <strong>nenhum valor daquele pedido é aplicado</strong>. Exceção: se o certificado ausente teria contribuição zero (suspensão), o pedido ainda é aplicado normalmente.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Vincula os pedidos ao ticket</h4>
+            <p>Todos os pedidos que o sistema <strong>tentou aplicar</strong> — com ou sem sucesso — são vinculados ao ticket de faturamento e aparecem na aba Movimentações da prévia.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Pedidos não aplicados</div>
+        <p>Quando um pedido não é aplicado (ex.: certificado não encontrado na prévia original), ele aparece na aba <strong>Movimentações</strong> destacado em <strong>vermelho</strong> (não aplicado). O pedido permanece com status <strong>Pendente</strong> e será tentado novamente no próximo faturamento. O RH deve verificar a aba Movimentações para entender quais pedidos foram ou não refletidos na prévia final.</p>
+      </div>
+
+      <h3>Aba "Prévia original"</h3>
+      <p>A aba <strong>Prévia original</strong> contém a base de dados do faturamento — os certificados e valores vigentes no sistema da Icatu. As colunas incluem:</p>
+      <ul>
+        <li><strong>Certificado</strong> e <strong>COD_NOME</strong> — identificação do certificado e código do participante</li>
+        <li><strong>Nome</strong> — nome do participante</li>
+        <li><strong>Benefício</strong> — código e tipo do benefício</li>
+        <li><strong>Vl. Total do Prêmio</strong>, <strong>Valor Empresa</strong>, <strong>Valor Funcionário</strong> — valores de contribuição</li>
+        <li><strong>Status</strong> — status do certificado (ATIVO, SUSPENSO, DESLIGADO)</li>
+        <li><strong>Data de Admissão</strong> e <strong>Data de Demissão</strong></li>
+        <li><strong>Fundo</strong> — fundo de investimento</li>
+        <li><strong>Tipo de conta</strong> — tipo de conta (empresa, participante)</li>
+        <li><strong>CPF</strong> — CPF do participante</li>
+      </ul>
+      <p>Essa aba <strong>não contém</strong> os pedidos de funcionários — representa apenas o estado sistêmico atual.</p>
+
+      <h3>Aba "Prévia final"</h3>
+      <p>A aba <strong>Prévia final</strong> possui a mesma estrutura da Prévia original, acrescida de uma coluna <strong>Movimentação</strong> que indica qual tipo de pedido foi aplicado em cada certificado. Os valores possíveis nessa coluna são:</p>
+      <ul>
+        <li><code>ADESÃO</code> — certificado adicionado por pedido de primeira adesão</li>
+        <li><code>TROCA DE PLANO</code> — certificado alterado por troca de plano</li>
+        <li><code>EDIÇÃO DE CONTRIBUIÇÃO</code> — valor de contribuição atualizado</li>
+        <li><code>SUSPENSÃO</code> — contribuição suspensa (zerada)</li>
+      </ul>
+      <p>Certificados sem movimentação mantêm a coluna Movimentação vazia — indicando que os valores são os mesmos da prévia original.</p>
+
+      <h3>Aba "Movimentações"</h3>
+      <p>A aba <strong>Movimentações</strong> é o <strong>mapa completo dos pedidos processados</strong> naquele faturamento. Ela permite ao RH rastrear exatamente o que o sistema tentou aplicar e o resultado de cada tentativa.</p>
+      <p>As colunas da aba Movimentações são:</p>
+      <ul>
+        <li><strong>ID Pedido</strong> — número identificador do pedido no Portal</li>
+        <li><strong>Movimentação</strong> — tipo do pedido (Adesão, Troca de plano, Edição de contribuição, Suspensão)</li>
+        <li><strong>CPF</strong> — CPF do funcionário</li>
+        <li><strong>Certificado</strong> — número do certificado</li>
+        <li><strong>Status Certificado</strong> — status do certificado (ATIVO, SUSPENSO, etc.)</li>
+        <li><strong>Novo Valor</strong> — novo valor de contribuição definido pelo pedido</li>
+      </ul>
+      <p>A aba utiliza cores para indicar o resultado:</p>
+      <ul>
+        <li><strong style="color: #16a34a;">Verde (Aplicado)</strong> — o pedido foi aplicado com sucesso na prévia final</li>
+        <li><strong style="color: #dc2626;">Vermelho (Não aplicado)</strong> — o pedido não pôde ser aplicado (ex.: certificado não encontrado na prévia original)</li>
+      </ul>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Como o RH deve usar a aba Movimentações</div>
+        <p>O RH deve consultar a aba Movimentações para <strong>validar</strong> se os pedidos pendentes foram corretamente refletidos na prévia final. Se algum pedido aparece em vermelho (não aplicado), o RH deve investigar o motivo — geralmente é um certificado que ainda não existe na base da Icatu. Nesses casos, o RH pode optar por aguardar o próximo ciclo ou entrar em contato com a Icatu para alinhar o tratamento.</p>
+      </div>
+
+      <h2>Lista de pedidos no Portal</h2>
+      <p>No menu lateral, acesse <strong>Pedidos</strong> para visualizar a listagem completa de pedidos de funcionários. A tela apresenta:</p>
+      <ul>
+        <li><strong>Filtros</strong> — por tipo de pedido, status e grupo</li>
+        <li><strong>Busca</strong> — por CPF ou CNPJ na barra superior</li>
+        <li><strong>Colunas</strong> — Nº (número do pedido), Data e hora, CPF, Tipo de pedido, CNPJ, Status</li>
+        <li><strong>Paginação</strong> — navegação por páginas quando há muitos resultados</li>
+        <li><strong>Edição em lote</strong> — selecione múltiplos pedidos pelos checkboxes e use o botão <strong>"Editar selecionados"</strong> para concluir ou recusar pedidos em massa</li>
+      </ul>
+
+      <div class="doc-image">
+        <img src="../Imagens/pedidos_funcionarios_lista.png" alt="Listagem de pedidos de funcionários no Portal" />
+        <div class="doc-image-caption">Lista de pedidos com filtros por tipo, status e grupo. Cada linha exibe o número do pedido, data, CPF, tipo, CNPJ e status atual. É possível selecionar múltiplos pedidos para edição em lote.</div>
+      </div>
+
+      <h2>Detalhes do pedido</h2>
+      <p>Ao clicar em um pedido na lista, o Portal exibe a tela de detalhes com todas as informações da solicitação:</p>
+      <ul>
+        <li><strong>Dados do funcionário</strong> — nome, CPF, salário</li>
+        <li><strong>Dados da empresa</strong> — grupo, razão social, CNPJ, contrato</li>
+        <li><strong>Certificados do pedido</strong> — tabela com certificado, contrato, modalidade (PGBL Regressivo/Progressivo), conta (Básica participante/empresa), fundo de investimento e <strong>nova contribuição</strong></li>
+        <li><strong>Comentários</strong> — canal de comunicação entre RH e Icatu sobre o pedido</li>
+        <li><strong>Histórico de atividades</strong> — registro cronológico de todas as ações realizadas no pedido (criação, conclusão, recusa, cancelamento)</li>
+      </ul>
+
+      <div class="doc-image">
+        <img src="../Imagens/pedido_detalhe_edicao_contribuicao.png" alt="Detalhe de um pedido de edição de contribuição com status Pendente" />
+        <div class="doc-image-caption">Detalhe de um pedido de Edição de contribuição (status Pendente). Exibe dados do funcionário, certificados com novos valores de contribuição, comentários e histórico. Os botões "Recusar" e "Concluir" ficam disponíveis no canto superior direito.</div>
+      </div>
+
+      <h2>Concluir pedido</h2>
+      <p>A ação de <strong>Concluir</strong> marca o pedido como processado no faturamento. Ao concluir, o pedido deixa de ser considerado nas próximas prévias.</p>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Quando concluir o pedido</div>
+        <p>O RH deve concluir o pedido <strong>somente quando o boleto estiver sendo gerado ou já tiver sido gerado</strong>, garantindo que a fatura foi fechada e não haverá alteração nos pedidos aplicados. Concluir prematuramente pode causar problemas se houver reprocessamento da prévia.</p>
+      </div>
+
+      <div class="doc-image">
+        <img src="../Imagens/pedido_detalhe_concluir.png" alt="Modal de conclusão de pedido" />
+        <div class="doc-image-caption">Modal de conclusão do pedido. O sistema alerta: "Ao concluir, esse pedido deixa de ser processado no faturamento. Conclua o pedido apenas se a alteração foi incluída na fatura e o boleto já foi gerado." O campo de comentário é opcional.</div>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Risco ao concluir na etapa "Em processamento"</div>
+        <p>O sistema sempre busca os pedidos com status <strong>Pendente</strong> para gerar a prévia. Se o RH concluir os pedidos enquanto o faturamento ainda estiver na etapa <strong>"Em processamento"</strong> e o usuário Icatu utilizar a ação <strong>"Reprocessar críticas"</strong>, o sistema irá gerar uma nova prévia <strong>sem os pedidos que foram marcados como concluídos</strong>, pois eles não terão mais status Pendente. Isso pode resultar em uma prévia com valores de contribuição diferentes do esperado.</p>
+      </div>
+
+      <h2>Recusar pedido</h2>
+      <p>A ação de <strong>Recusar</strong> descarta o pedido do faturamento. É utilizada quando o pedido não deve ser considerado naquele ciclo — por exemplo, quando há divergência nos dados ou a solicitação precisa ser revisada.</p>
+      <p>Ao recusar, o preenchimento do campo <strong>Motivo</strong> é obrigatório. Esse registro fica disponível no histórico de atividades do pedido.</p>
+
+      <div class="doc-image">
+        <img src="../Imagens/pedido_detalha_recusar.png" alt="Modal de recusa de pedido com campo de motivo obrigatório" />
+        <div class="doc-image-caption">Modal de recusa do pedido. O campo "Motivo" é obrigatório e deve descrever por que o pedido não será aplicado ao faturamento.</div>
+      </div>
+
+      <h2>Pedidos cancelados</h2>
+      <p>Um pedido é cancelado <strong>automaticamente</strong> quando o funcionário realiza um novo pedido no app que substitui o anterior. O cancelamento garante que apenas o pedido mais recente — que representa a configuração atual do plano — seja considerado no faturamento.</p>
+
+      <div class="doc-image">
+        <img src="../Imagens/pedido_detalhe_cancelado.png" alt="Detalhe de um pedido cancelado automaticamente" />
+        <div class="doc-image-caption">Pedido cancelado automaticamente. O banner informa: "Esse pedido foi cancelado porque um pedido mais recente foi realizado. Consideramos a última solicitação feita no app." O histórico de atividades registra o motivo do cancelamento.</div>
+      </div>
+
+      <h2>Responsabilidades do RH</h2>
+      <p>O RH tem papel fundamental na gestão dos pedidos de funcionários durante o faturamento. As principais responsabilidades são:</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Validar os pedidos aplicados na prévia</h4>
+            <p>Ao receber a prévia de faturamento, conferir a aba <strong>Movimentações</strong> para verificar quais pedidos foram aplicados (verde) e quais não foram (vermelho). Comparar a <strong>Prévia original</strong> com a <strong>Prévia final</strong> para confirmar se os valores estão corretos.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Investigar pedidos não aplicados</h4>
+            <p>Para pedidos que aparecem em vermelho na aba Movimentações, investigar o motivo (certificado ausente na base da Icatu, divergência cadastral, etc.) e alinhar o tratamento com a equipe Icatu quando necessário.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Concluir pedidos após a emissão do boleto</h4>
+            <p>Na lista de Pedidos, concluir todos os pedidos que foram aplicados na prévia <strong>somente após a emissão dos boletos</strong>. Não concluir prematuramente — aguardar a confirmação de que a fatura foi fechada.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Recusar pedidos quando necessário</h4>
+            <p>Se um pedido não deve ser considerado no faturamento (dados incorretos, solicitação indevida), recusar informando o motivo. O pedido recusado não será aplicado em faturamentos futuros.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Permissões</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Ação</th><th>Perfis permitidos</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Visualizar lista de pedidos</strong></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">filial-icatu</span> <span class="tag tag-insurer">analista-icatu</span> <span class="tag tag-company">admin-empresa</span> <span class="tag tag-company">analista-empresa</span> <span class="tag tag-company">parceiro-empresa</span></td>
+            </tr>
+            <tr>
+              <td><strong>Concluir / Recusar pedidos</strong></td>
+              <td><span class="tag tag-company">admin-empresa</span> <span class="tag tag-company">analista-empresa</span> <span class="tag tag-company">parceiro-empresa</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Orientações para o time Icatu</h2>
+      <p>O time Icatu não gerencia pedidos diretamente, mas desempenha um papel importante no suporte ao RH. Principais pontos de atenção:</p>
+
+      <h3>Pedidos não aplicados na prévia</h3>
+      <p>Se o RH reportar que um pedido não foi refletido na prévia, verifique:</p>
+      <ul>
+        <li><strong>Aba Movimentações</strong> — o pedido aparece em vermelho? Se sim, o certificado provavelmente não existe na base da Icatu (prévia original).</li>
+        <li><strong>Status do pedido</strong> — está como Pendente? Se estiver como Cancelado, significa que o funcionário fez um pedido mais recente que substituiu o anterior.</li>
+        <li><strong>Certificado na base Icatu</strong> — o certificado pode ainda não ter sido processado nos arquivos diários. Alinhe com a equipe operacional para verificar.</li>
+      </ul>
+
+      <h3>Reprocessamento e pedidos concluídos</h3>
+      <p>Antes de utilizar a ação <strong>"Reprocessar críticas"</strong> na etapa "Em processamento", verifique se o RH já concluiu algum pedido na lista de Pedidos. Se o RH tiver concluído pedidos que estavam aplicados na prévia, o reprocessamento irá gerar uma nova prévia <strong>sem esses pedidos</strong>, pois o sistema só busca pedidos com status Pendente.</p>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Antes de reprocessar</div>
+        <p>Oriente o RH a <strong>não concluir pedidos</strong> enquanto o faturamento estiver nas etapas de <strong>Validação RH</strong> ou <strong>Em processamento</strong>. A conclusão deve ser feita somente quando os boletos estiverem sendo gerados ou já tiverem sido emitidos (etapa Aguardando Kit ou Kit disponível).</p>
+      </div>
+
+      <h3>Dúvidas frequentes do RH</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Dúvida</th><th>Orientação</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>"O pedido do funcionário não aparece na prévia"</td>
+              <td>Verificar a aba Movimentações: se o pedido aparece em vermelho, o certificado não foi encontrado na base. Se não aparece, o pedido pode ter sido cancelado por um pedido mais recente ou ainda não foi registrado no Portal.</td>
+            </tr>
+            <tr>
+              <td>"O funcionário fez um novo pedido após o faturamento ser aberto"</td>
+              <td>O novo pedido cancela automaticamente o anterior. Se o faturamento já foi iniciado, o novo pedido será considerado somente no próximo ciclo — a prévia atual não é atualizada automaticamente.</td>
+            </tr>
+            <tr>
+              <td>"Concluí o pedido cedo demais, e agora?"</td>
+              <td>Se o faturamento ainda estiver em processamento e houver reprocessamento, a prévia será gerada sem o pedido concluído. Nesse caso, pode ser necessário substituir a prévia manualmente incluindo os valores do pedido.</td>
+            </tr>
+            <tr>
+              <td>"Um pedido está como Recusado, mas o funcionário quer que seja aplicado"</td>
+              <td>Um pedido recusado não pode ser revertido. O funcionário deve fazer um novo pedido no app, que será registrado como um novo pedido Pendente no Portal e aplicado no próximo faturamento.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Resumo operacional</div>
+        <ul>
+          <li>Pedidos afetam <strong>apenas faturamentos regulares</strong> — faturamentos complementares não são impactados.</li>
+          <li>A prévia é gerada com 3 abas: Prévia original (base Icatu), Prévia final (consolidada com pedidos) e Movimentações (mapa de pedidos).</li>
+          <li>O RH deve <strong>validar a aba Movimentações</strong>, tratar pedidos não aplicados e <strong>concluir apenas após a emissão dos boletos</strong>.</li>
+          <li>Se houver reprocessamento, apenas pedidos com status <strong>Pendente</strong> serão considerados na nova prévia.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- SUBSTITUIR PRÉVIA                                            -->
+    <!-- ============================================================ -->
+    <article id="substituir-previa" class="page">
+      <h1>Substituir prévia</h1>
+      <p class="page-subtitle">Como enviar uma nova versão da prévia de faturamento e o que acontece quando ela é substituída.</p>
+
+      <h2>O que é a prévia</h2>
+      <p>A <strong>prévia de faturamento</strong> é o arquivo gerado pelo sistema com os dados de contribuição de cada certificado vinculado a um contrato. Cada contrato no ticket tem sua própria prévia, exibida como um card na aba <strong>"Prévias de faturamento"</strong>.</p>
+      <p>Cada card de prévia mostra: número do contrato, tipo (PGBL/VGBL), valor parcial estimado, quantidade de linhas e número de críticas pendentes.</p>
+
+      <div class="doc-image">
+        <img src="../Imagens/faturamento_em_processamento_visao_icatu.png" alt="Tela de prévias de faturamento — visão Icatu em processamento" />
+        <div class="doc-image-caption">Tela de detalhes do faturamento na etapa "Em processamento" (visão Icatu), mostrando os cards de prévia por contrato com valores, linhas e críticas.</div>
+      </div>
+
+      <h2>Quando substituir a prévia</h2>
+      <ul>
+        <li>Quando o RH identificou erros nos dados e precisa enviar uma versão corrigida</li>
+        <li>Quando há mudanças em contribuições de colaboradores</li>
+        <li>Quando a Icatu devolveu o ticket para o RH e a prévia precisa ser atualizada</li>
+      </ul>
+
+      <h2>Como substituir</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Acesse o ticket de faturamento</h4>
+            <p>Na lista de faturamentos, clique no ticket desejado.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Clique em "Enviar/Substituir prévias"</h4>
+            <p>No painel <strong>"Próximos Passos"</strong> (canto superior direito), clique no botão correspondente.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Faça upload do arquivo</h4>
+            <p>Selecione o arquivo <code>.xlsx</code> da prévia corrigida. O nome do arquivo deve conter o <strong>número do contrato</strong> correspondente.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Verifique o processamento</h4>
+            <p>O sistema valida o arquivo. Se houver erros, uma mensagem de <strong>"Arquivos Inválidos"</strong> será exibida (veja <a href="#erros-upload">Erros de upload</a>). Se o upload for bem-sucedido, a prévia é atualizada e as críticas são recalculadas.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Quem pode substituir em cada etapa</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Etapa</th><th>Quem pode substituir</th></tr></thead>
+          <tbody>
+            <tr><td>Pré-validação</td><td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">analista-icatu</span> <span class="tag tag-insurer">filial-icatu</span></td></tr>
+            <tr><td>Validação RH</td><td><span class="tag tag-company">admin-empresa</span> <span class="tag tag-company">analista-empresa</span> <span class="tag tag-company">parceiro-empresa</span></td></tr>
+            <tr><td>Em processamento</td><td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">analista-icatu</span> <span class="tag tag-insurer">filial-icatu</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Prévia mais recente</div>
+        <p>Os cards de prévia exibem um botão <strong>"Prévia mais recente"</strong> que sempre mostra a última versão válida do arquivo. Versões anteriores ficam acessíveis pelo nome do arquivo original exibido no card.</p>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- ERROS DE UPLOAD                                              -->
+    <!-- ============================================================ -->
+    <article id="erros-upload" class="page">
+      <h1>Erros de upload</h1>
+      <p class="page-subtitle">Todos os tipos de erros que podem ocorrer ao enviar ou substituir uma prévia, como aparecem para o usuário e como resolvê-los.</p>
+
+      <p>Ao substituir uma prévia de faturamento, o sistema executa uma série de validações no arquivo <code>.xlsx</code> enviado. Se alguma validação falhar, o upload é rejeitado e o usuário é notificado. Os erros podem aparecer de duas formas:</p>
+      <ul>
+        <li><strong>Card de erro na tela</strong> — um banner vermelho "Arquivos Inválidos" é exibido diretamente na aba de Prévias de faturamento.</li>
+        <li><strong>Detalhes na planilha de retorno</strong> — quando há erros de conteúdo por linha, o sistema gera uma planilha para download com a descrição de cada problema encontrado.</li>
+      </ul>
+
+      <div class="doc-image">
+        <img src="../Imagens/faturamento_erro_upload_02.png" alt="Card de erro de upload na tela do portal" />
+        <div class="doc-image-caption">Exemplo de card "Arquivos Inválidos" exibido na tela. A mensagem descreve o problema e o botão "Baixar planilha" permite obter o detalhamento dos erros por linha.</div>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Comportamento geral</div>
+        <p>Mesmo com erro no upload, o ticket <strong>não é bloqueado</strong>. A prévia anterior permanece ativa. O erro se refere apenas ao arquivo que foi rejeitado — é possível tentar novamente quantas vezes forem necessárias.</p>
+      </div>
+
+      <h2>Erros de arquivo (exibidos na tela)</h2>
+      <p>Esses erros impedem o processamento do arquivo inteiro e são exibidos como card de erro diretamente na tela do portal.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Erro</th><th>Quando ocorre</th><th>Mensagem para o usuário</th><th>Como resolver</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Contrato inválido</strong></td>
+              <td>O número do contrato no arquivo não corresponde a nenhum contrato do ticket</td>
+              <td>"Não foi possível substituir as prévias porque o arquivo <em>{nome}</em> não corresponde a nenhum contrato deste faturamento. Confira o número informado no campo 'Contrato' e envie o arquivo novamente."</td>
+              <td>Verifique se o contrato no cabeçalho do arquivo (linha 2) bate com um dos contratos do ticket. Confirme que está no ticket correto.</td>
+            </tr>
+            <tr>
+              <td><strong>Arquivo protegido</strong></td>
+              <td>O arquivo está protegido por senha</td>
+              <td>"O arquivo <em>{nome}</em> está protegido por senha. Remova a senha e envie novamente."</td>
+              <td>Abra o arquivo no Excel, remova a proteção por senha (Arquivo &gt; Informações &gt; Proteger Pasta de Trabalho) e salve novamente.</td>
+            </tr>
+            <tr>
+              <td><strong>Colunas inválidas</strong></td>
+              <td>O arquivo não possui as colunas obrigatórias ou estão nomeadas incorretamente</td>
+              <td>"Não foi possível substituir as prévias porque o arquivo <em>{nome}</em> tem colunas inválidas ou ausentes. Corrija a planilha e envie novamente."</td>
+              <td>Baixe a prévia mais recente como modelo e verifique se todas as colunas obrigatórias estão presentes e com os nomes corretos.</td>
+            </tr>
+            <tr>
+              <td><strong>Erro genérico</strong></td>
+              <td>Erro inesperado durante o processamento da prévia</td>
+              <td>"Não foi possível processar a prévia de faturamento. Por favor, tente novamente mais tarde."</td>
+              <td>Aguarde alguns minutos e tente novamente. Se o erro persistir, entre em contato com o suporte técnico.</td>
+            </tr>
+            <tr>
+              <td><strong>Erros no conteúdo</strong></td>
+              <td>O arquivo possui erros nos dados (detalhados na planilha de retorno)</td>
+              <td>"Não foi possível substituir as prévias porque encontramos erros no arquivo <em>{nome}</em>. Baixe a planilha em anexo com os detalhes, corrija as informações e envie novamente."</td>
+              <td>Clique em <strong>"Baixar planilha"</strong> no card de erro para obter o relatório detalhado. Veja as tabelas abaixo para cada tipo de erro possível.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Erros de cabeçalho (estrutura do arquivo)</h2>
+      <p>As 3 primeiras linhas do arquivo <code>.xlsx</code> devem seguir uma estrutura fixa. Erros nessas linhas aparecem na <strong>planilha de retorno</strong> para download.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Linha</th><th>Campo</th><th>Formato esperado</th><th>Mensagem de erro</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Linha 1, coluna A</td>
+              <td>Label "Empresa"</td>
+              <td>Texto exato: <code>Empresa:</code></td>
+              <td>A célula 1A deve conter exatamente o texto "Empresa".</td>
+            </tr>
+            <tr>
+              <td>Linha 1, coluna B</td>
+              <td>Nome da empresa</td>
+              <td>Nome em letras maiúsculas. Ex: <code>NOME DA EMPRESA</code></td>
+              <td>O nome da empresa está incorreto ou não foi informado. Informe em letras maiúsculas.</td>
+            </tr>
+            <tr>
+              <td>Linha 2, coluna A</td>
+              <td>Label "Contrato"</td>
+              <td>Texto exato: <code>Contrato:</code></td>
+              <td>A célula 2A deve conter exatamente o texto "Contrato".</td>
+            </tr>
+            <tr>
+              <td>Linha 2, coluna B</td>
+              <td>Número do contrato</td>
+              <td>8 dígitos numéricos. Ex: <code>00012345</code></td>
+              <td>O número do contrato é inválido ou não foi informado.</td>
+            </tr>
+            <tr>
+              <td>Linha 3, coluna A</td>
+              <td>Label "Competência"</td>
+              <td>Texto exato: <code>Competência:</code></td>
+              <td>A célula 3A deve conter exatamente o texto "Competência".</td>
+            </tr>
+            <tr>
+              <td>Linha 3, coluna B</td>
+              <td>Competência</td>
+              <td>Formato <code>mm/yyyy</code> (mês de 01 a 12). Ex: <code>01/2025</code></td>
+              <td>Insira a competência no formato mm/yyyy.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Erros de conteúdo por coluna</h2>
+      <p>A partir da linha de dados, o sistema valida o conteúdo de cada coluna individualmente. Erros aparecem na <strong>planilha de retorno</strong>, indicando a linha e o campo com problema.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Campo</th><th>Formato esperado</th><th>Erro quando</th><th>Mensagem de erro</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><code>cpf</code></td>
+              <td>CPF válido, apenas dígitos</td>
+              <td>CPF inválido ou vazio</td>
+              <td>O número do CPF é inválido ou não foi informado. Insira um CPF válido contendo apenas dígitos.</td>
+            </tr>
+            <tr>
+              <td><code>certificado</code></td>
+              <td>12 dígitos numéricos</td>
+              <td>Valor não numérico ou fora do padrão</td>
+              <td>O número do certificado é inválido ou não foi informado. Informe um certificado válido contendo apenas dígitos.</td>
+            </tr>
+            <tr>
+              <td><code>matricula</code></td>
+              <td>Número inteiro ou vazio</td>
+              <td>Valor não numérico e não vazio</td>
+              <td>O código de matrícula é inválido. Informe um código válido contendo apenas dígitos.</td>
+            </tr>
+            <tr>
+              <td><code>nome_participante</code></td>
+              <td>Nome sem números ou caracteres especiais, ou vazio</td>
+              <td>Contém números, underline ou caracteres especiais</td>
+              <td>Insira um nome válido sem números ou caracteres especiais.</td>
+            </tr>
+            <tr>
+              <td><code>beneficio</code></td>
+              <td>Formato <code>XXXXX - TIPO DE CONTA</code></td>
+              <td>Formato inválido ou vazio</td>
+              <td>O código do benefício é inválido. Insira um valor no formato 'XXXXX - TIPO DE CONTA'.</td>
+            </tr>
+            <tr>
+              <td><code>valor_contribuicao</code></td>
+              <td>Número decimal ou inteiro (obrigatório)</td>
+              <td>Valor não numérico ou vazio</td>
+              <td>O valor total de contribuição é inválido ou não foi informado.</td>
+            </tr>
+            <tr>
+              <td><code>valor_funcionario</code></td>
+              <td>Número decimal ou inteiro (obrigatório)</td>
+              <td>Valor não numérico ou vazio</td>
+              <td>O valor da contribuição do funcionário é inválido ou não foi informado.</td>
+            </tr>
+            <tr>
+              <td><code>valor_empresa</code></td>
+              <td>Número decimal ou inteiro (obrigatório)</td>
+              <td>Valor não numérico ou vazio</td>
+              <td>O valor da contribuição da empresa é inválido ou não foi informado.</td>
+            </tr>
+            <tr>
+              <td><code>status_certificado</code></td>
+              <td>ATIVO, SUSPENSO ou DESLIGADO (obrigatório)</td>
+              <td>Valor não permitido ou vazio</td>
+              <td>Status inválido ou não informado. Status aceitos: ATIVO, SUSPENSO ou DESLIGADO.</td>
+            </tr>
+            <tr>
+              <td><code>data_admissao</code></td>
+              <td>Formato <code>DD/MM/YYYY</code> ou vazio</td>
+              <td>Formato de data inválido</td>
+              <td>Data de admissão inválida. Insira no formato dd/mm/yyyy. Ex: 10/01/2024.</td>
+            </tr>
+            <tr>
+              <td><code>data_desligamento</code></td>
+              <td>Formato <code>DD/MM/YYYY</code> ou vazio</td>
+              <td>Formato de data inválido</td>
+              <td>Data de desligamento inválida. Insira no formato dd/mm/yyyy. Ex: 10/01/2025.</td>
+            </tr>
+            <tr>
+              <td><code>codigo_fundo</code></td>
+              <td>5 caracteres (letras maiúsculas e/ou números, obrigatório)</td>
+              <td>Formato inválido ou vazio</td>
+              <td>O código do fundo é inválido. Insira um código válido com 5 caracteres.</td>
+            </tr>
+            <tr>
+              <td><code>tipo_conta</code></td>
+              <td>Formato <code>XX - TIPO DE CONTA</code> (obrigatório)</td>
+              <td>Formato inválido ou vazio</td>
+              <td>O tipo de conta é inválido. Insira um valor no formato 'XX - TIPO DE CONTA'.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Erros de validação de dados</h2>
+      <p>Além da validação por campo, o sistema verifica a consistência geral dos dados.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Validação</th><th>Erro quando</th><th>Mensagem de erro</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Certificado duplicado</strong></td>
+              <td>O mesmo número de certificado aparece em duas ou mais linhas na planilha</td>
+              <td>O código do certificado aparece em duas ou mais linhas. Preencha apenas uma linha para cada certificado.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Fluxo de resolução</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Identifique o tipo de erro</h4>
+            <p>Se o card de erro na tela contém o botão <strong>"Baixar planilha"</strong>, trata-se de erros no conteúdo — clique para obter o relatório detalhado. Caso contrário, a mensagem do card já descreve o problema (contrato inválido, arquivo protegido, etc.).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Analise e corrija</h4>
+            <p>Na planilha de retorno, cada linha com erro contém a descrição do problema. Consulte as tabelas acima para entender o formato esperado de cada campo e corrija os dados na prévia original.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Reenvie o arquivo</h4>
+            <p>Faça upload da prévia corrigida usando o botão <strong>"Enviar/Substituir prévias"</strong> nos Próximos Passos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Normalização automática</div>
+        <p>O sistema aplica normalização automática em alguns campos: nomes de participantes, empresas, benefícios, fundos e tipos de conta são convertidos para <strong>letras maiúsculas</strong> automaticamente. Porém, se o valor original contiver caracteres inválidos (números em nomes, formatos incorretos), o erro será retornado antes da normalização.</p>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Dica para suporte</div>
+        <p>Os erros mais comuns reportados por usuários RH são: (1) <strong>contrato inválido</strong> — geralmente o usuário está enviando a prévia no ticket errado; (2) <strong>formato de competência</strong> — o Excel pode converter a data para formato diferente de <code>mm/yyyy</code>; (3) <strong>certificado duplicado</strong> — linhas copiadas acidentalmente na planilha.</p>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- RESOLUÇÃO DE CRÍTICAS                                        -->
+    <!-- ============================================================ -->
+    <article id="resolucao-criticas" class="page">
+      <h1>Resolução de críticas</h1>
+      <p class="page-subtitle">O que são as críticas de faturamento, como visualizá-las, as opções de resolução e o processo completo por perfil.</p>
+
+      <h2>O que são críticas</h2>
+      <p>Críticas são <strong>inconsistências identificadas automaticamente pelo sistema</strong> ao processar as prévias de faturamento. Elas podem indicar divergências cadastrais, valores incompatíveis, certificados com problemas, entre outros. Enquanto houver críticas pendentes, o faturamento não pode avançar normalmente.</p>
+      <p>Cada crítica é identificada por um <strong>código</strong> (numérico ou com prefixo "CI") e uma descrição do problema encontrado. O apontamento e a geração de críticas são realizados <strong>exclusivamente pelo sistema</strong> — nenhum usuário (RH ou Icatu) gera críticas manualmente. Os usuários apenas <strong>resolvem</strong> as críticas apontadas, selecionando a ação de resolução adequada.</p>
+
+      <h2>Aba de Críticas</h2>
+      <p>No detalhe de um faturamento, a aba <strong>"Críticas"</strong> mostra um painel completo com:</p>
+      <ul>
+        <li><strong>Cards de críticas pendentes</strong> — agrupados por tipo, com a contagem de ocorrências e link "ver críticas"</li>
+        <li><strong>Filtros</strong> — busca por CPF, nome, certificado; filtro por contrato e tipo de crítica</li>
+        <li><strong>Tabela detalhada</strong> — lista cada crítica individualmente com: contrato, descrição, CPF, nome, certificado, status, tipo de conta, fundo e ações disponíveis</li>
+      </ul>
+
+      <div class="doc-image">
+        <img src="../Imagens/faturamento_aba_criticas.png" alt="Aba de críticas — visão com críticas pendentes" />
+        <div class="doc-image-caption">Aba "Críticas" com 4 críticas pendentes. Os cards superiores mostram os tipos de crítica; a tabela abaixo detalha cada ocorrência com dados do certificado.</div>
+      </div>
+
+      <h2>Opções de resolução de crítica</h2>
+      <p>Ao resolver uma crítica, o usuário deve selecionar uma das ações disponíveis. Nem todos os tipos de crítica permitem todas as opções — o sistema exibirá somente as ações permitidas para cada caso.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Ação</th><th>Nome no Portal</th><th>Descrição</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><code>descartar</code></td>
+              <td><strong>Descartar linha do faturamento</strong></td>
+              <td>Remove o certificado com a inconsistência deste faturamento. O certificado não será incluído na cobrança deste ciclo. Útil quando o dado está incorreto e não pode ser corrigido a tempo, ou quando o certificado não deve ser faturado.</td>
+            </tr>
+            <tr>
+              <td><code>corrigir</code></td>
+              <td><strong>Aceitar valores para este faturamento</strong></td>
+              <td>Considera que o valor indicado na planilha de prévia está correto e deve ser faturado <strong>neste processo</strong>. A correção se aplica apenas ao faturamento atual — nos próximos ciclos, o sistema voltará a comparar com os dados sistêmicos.</td>
+            </tr>
+            <tr>
+              <td><code>corrigir_definitivo</code></td>
+              <td><strong>Aceitar valores para este e os próximos faturamentos</strong></td>
+              <td>Considera que o valor indicado na planilha está correto e deve ser faturado desta maneira <strong>neste processo e nos processos futuros</strong>. A decisão é persistida no sistema, evitando que a mesma crítica seja gerada novamente em faturamentos subsequentes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">Atenção</div>
+        <p>Algumas críticas possuem apenas a ação <strong>descartar</strong>, enquanto outras permitem combinações de <code>descartar</code>, <code>corrigir</code> e <code>corrigir_definitivo</code>. Há ainda críticas sem ação disponível no portal (código 18), que exigem tratamento manual fora do sistema. Consulte a tabela de mapa de críticas abaixo para saber as ações disponíveis para cada tipo.</p>
+      </div>
+
+      <h2>Mapa completo de críticas</h2>
+      <p>A tabela abaixo lista todas as críticas que o sistema pode gerar ao processar as prévias de faturamento. Cada crítica possui um código Icatu, uma descrição exibida no portal, uma orientação (tooltip) e as ações de resolução disponíveis.</p>
+
+      <h3>Críticas com código numérico (origem Icatu)</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Exibição no Portal</th>
+              <th>Orientação (Tooltip)</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>04</code></td>
+              <td>Certificado não está ativo para o CNPJ</td>
+              <td>—</td>
+              <td><code>descartar</code></td>
+            </tr>
+            <tr>
+              <td><code>12</code></td>
+              <td>Não foi possível encontrar informações do conjunto de CPF e certificado informado</td>
+              <td>Recomendamos corrigir o tipo de conta em um novo upload de prévia (ver coluna infos adicionais). É possível descartar esta(s) linha(s) de faturamento.</td>
+              <td><code>descartar</code></td>
+            </tr>
+            <tr>
+              <td><code>12</code></td>
+              <td>Certificado não está vinculado ao CPF informado</td>
+              <td>Recomendamos corrigir o número do certificado em um novo upload de prévia (atualizar faturamento). É possível descartar esta(s) linha(s) de faturamento.</td>
+              <td><code>descartar</code></td>
+            </tr>
+            <tr>
+              <td><code>13</code></td>
+              <td>Certificado não está passível de cobrança</td>
+              <td>Aceitar valores reativa o certificado para contribuição.</td>
+              <td><code>descartar</code> <code>corrigir</code> <code>corrigir_definitivo</code></td>
+            </tr>
+            <tr>
+              <td><code>13</code></td>
+              <td>Certificado não está ativo e faturável</td>
+              <td>Recomendamos utilizar outro certificado para a contribuição ou retirar (descartar) do faturamento.</td>
+              <td><code>descartar</code></td>
+            </tr>
+            <tr>
+              <td><code>14</code></td>
+              <td>Certificado está suspenso para contribuição</td>
+              <td>Aceitar valores confirma a reativação do certificado para contribuição.</td>
+              <td><code>descartar</code> <code>corrigir</code> <code>corrigir_definitivo</code></td>
+            </tr>
+            <tr>
+              <td><code>17</code></td>
+              <td>Certificado com contribuição zero sem indicação de desligamento ou suspensão</td>
+              <td>Aceitar valores em definitivo confirma a suspensão do faturamento deste certificado.</td>
+              <td><code>corrigir_definitivo</code></td>
+            </tr>
+            <tr>
+              <td><code>18</code></td>
+              <td>Valor de contribuição informado para o certificado está diferente da participação estabelecida</td>
+              <td>Sinalizar que é um certificado de risco e RH atualizar valor.</td>
+              <td><em>nenhuma</em></td>
+            </tr>
+            <tr>
+              <td><code>19</code></td>
+              <td>Certificado com novo valor de contribuição</td>
+              <td>Aceitar valores confirma a nova contribuição para o(s) certificado(s).</td>
+              <td><code>descartar</code> <code>corrigir</code> <code>corrigir_definitivo</code></td>
+            </tr>
+            <tr>
+              <td><code>20</code></td>
+              <td>Certificado faturável não se encontra no arquivo de prévia</td>
+              <td>É possível incluir estes certificados em um novo upload de prévia (atualizar faturamento) ou descartar esta crítica.</td>
+              <td><code>descartar</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Críticas com prefixo CI (validações internas Onze)</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Exibição no Portal</th>
+              <th>Orientação (Tooltip)</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>CI1</code></td>
+              <td>Colaborador sem relação de partida e contrapartida</td>
+              <td>Recomendamos incluir o certificado complementar para viabilizar a regra de custeio ou descartar este colaborador do faturamento.</td>
+              <td><code>descartar</code></td>
+            </tr>
+            <tr>
+              <td><code>CI2</code></td>
+              <td>Certificado com valor de contribuição abaixo do mínimo</td>
+              <td>Descartar retira o certificado do faturamento. É possível alterar o valor de contribuição em novo upload de prévia (substituir prévias).</td>
+              <td><code>descartar</code></td>
+            </tr>
+            <tr>
+              <td><code>CI3</code></td>
+              <td>Valores informados para as partes empresa e participante não equivale ao valor total de contribuição</td>
+              <td>Recomendamos alinhar os valores dos campos "Vl. Total do Prêmio" e "Valor Empresa / Valor Funcionário" para garantir a consistência dos dados e possibilitar a inclusão no faturamento.</td>
+              <td><code>descartar</code></td>
+            </tr>
+            <tr>
+              <td><code>CI5</code></td>
+              <td>Funcionário está desligado sistemicamente e não pode ser faturado</td>
+              <td>Descartar retira o certificado do faturamento. Caso o funcionário não esteja desligado, entrar em contato com a ICATU.</td>
+              <td><code>descartar</code></td>
+            </tr>
+            <tr>
+              <td><code>CI6</code></td>
+              <td>Somatório do valor total de contribuição neste tipo de conta está abaixo do mínimo</td>
+              <td>Descartar retira o certificado do faturamento. É possível alterar o valor de contribuição em novo upload de prévia (substituir prévias).</td>
+              <td><code>descartar</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Informações complementares</div>
+        <p>Algumas críticas exibem dados adicionais no portal para auxiliar na resolução, como o valor de contribuição previsto pela Icatu, o status sistêmico do certificado, a periodicidade de cobrança ou o tipo de conta associado. Essas informações aparecem na coluna "Infos adicionais" da tabela de críticas.</p>
+      </div>
+
+      <h2>Resolvendo críticas <span class="tag tag-company">VISÃO RH</span></h2>
+      <p>Na etapa <strong>"Validação RH"</strong>, é responsabilidade do RH resolver as críticas pendentes antes de enviar o faturamento para a Icatu. O faturamento só pode ser enviado quando <strong>todas as críticas estiverem resolvidas</strong>.</p>
+
+      <div class="doc-image">
+        <img src="../Imagens/faturamento_validação_rh_visao_rh.png" alt="Aba de críticas — visão RH com críticas resolvidas" />
+        <div class="doc-image-caption">Visão do RH na etapa de validação. Neste exemplo, todas as críticas foram resolvidas (0 pendentes). O botão "Enviar para ICATU" está disponível nos Próximos Passos.</div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Analise cada crítica</h4>
+            <p>Clique em "ver críticas" nos cards ou navegue pela tabela. Identifique a causa de cada inconsistência, consultando a descrição, o tooltip e as informações adicionais.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Selecione a ação de resolução</h4>
+            <p>Selecione as críticas na tabela e clique em <strong>"Resolver críticas selecionadas"</strong>. Escolha entre as ações disponíveis para o tipo de crítica: <code>descartar</code>, <code>corrigir</code> ou <code>corrigir_definitivo</code>. Se necessário, corrija os dados diretamente na planilha de prévia e faça um novo upload antes de resolver.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Exporte se necessário</h4>
+            <p>Use o botão <strong>"Exportar"</strong> para baixar a lista de críticas em formato planilha, facilitando a análise offline e o alinhamento com a equipe.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Envie para a Icatu</h4>
+            <p>Com todas as críticas resolvidas (0 pendentes), clique em <strong>"Enviar para ICATU"</strong> nos Próximos Passos para avançar o faturamento para a etapa de processamento.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Visão da Icatu <span class="tag tag-insurer">VISÃO ICATU</span></h2>
+
+      <h3>Na etapa "Validação RH"</h3>
+      <p>Enquanto o RH resolve as críticas, a Icatu tem as seguintes ações disponíveis:</p>
+      <ul>
+        <li><strong>Reprocessar críticas</strong> — solicita que o sistema reavalie a prévia de faturamento e aponte novamente as críticas identificadas. Útil quando houve atualização cadastral ou correção externa que pode ter resolvido inconsistências.</li>
+        <li><strong>Puxar para a Icatu</strong> — muda o status do faturamento para "Em processamento", mesmo que o RH não tenha enviado. O RH perde a possibilidade de editar a partir desse momento.</li>
+      </ul>
+
+      <h3>Na etapa "Em processamento"</h3>
+      <p>Após o RH enviar (ou a Icatu puxar o faturamento), a Icatu processa o faturamento:</p>
+
+      <div class="doc-image">
+        <img src="../Imagens/faturamento_em_processamento_visao_icatu.png" alt="Tela de processamento — visão Icatu" />
+        <div class="doc-image-caption">Visão Icatu na etapa "Em processamento". Ações disponíveis: Gerar relatórios finais, Marcar início de emissão de fatura, Enviar/Substituir prévias e Mais ações.</div>
+      </div>
+
+      <ul>
+        <li><strong>Reprocessar críticas</strong> — solicita que o sistema reavalie a prévia e aponte novas críticas, se houver. A Icatu pode resolver as críticas identificadas nesta etapa.</li>
+        <li><strong>Resolver críticas</strong> — em caráter excepcional, a Icatu pode resolver críticas pendentes diretamente na etapa de processamento, utilizando as mesmas opções de resolução (descartar, corrigir, corrigir_definitivo).</li>
+        <li><strong>Devolver para RH</strong> — retornar o faturamento para a etapa de validação RH, caso o RH precise resolver pendências.</li>
+        <li><strong>Exportar relatórios</strong> — gerar e baixar relatórios finais <span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">analista-icatu</span></li>
+        <li><strong>Enviar para fatura emitida</strong> — avançar para emissão <span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">analista-icatu</span></li>
+      </ul>
+
+      <h2>Permissões por etapa</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Ação</th><th>Validação RH</th><th>Em processamento</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Resolver críticas</strong></td>
+              <td><span class="tag tag-company">admin-empresa</span> <span class="tag tag-company">analista-empresa</span> <span class="tag tag-company">parceiro-empresa</span></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">analista-icatu</span> <span class="tag tag-insurer">filial-icatu</span></td>
+            </tr>
+            <tr>
+              <td><strong>Reprocessar críticas</strong></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">analista-icatu</span> <span class="tag tag-insurer">filial-icatu</span></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">analista-icatu</span> <span class="tag tag-insurer">filial-icatu</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Checkbox "Mostrar críticas resolvidas"</div>
+        <p>Por padrão, a aba de críticas exibe apenas as pendentes. Marque o checkbox <strong>"Mostrar críticas resolvidas"</strong> para ver o histórico completo de todas as críticas — útil para auditoria e acompanhamento.</p>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- GRUPOS E EMPRESAS                                            -->
+    <!-- ============================================================ -->
+    <article id="grupos-empresas" class="page">
+      <h1>Grupos e empresas</h1>
+      <p class="page-subtitle">Estrutura organizacional do Portal: como grupos, empresas e contratos se relacionam e como navegar pelas configurações de cada cliente.</p>
+
+      <h2>Hierarquia: Grupo → Empresa → Contrato</h2>
+      <p>O Portal de Faturamento organiza os dados em três níveis hierárquicos. Essa estrutura permeia todas as funcionalidades — do faturamento às permissões de acesso.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Nível</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Grupo</strong></td>
+              <td>Representa um cliente ou grupo empresarial. É o nível mais alto da hierarquia e agrupa uma ou mais empresas.</td>
+              <td>Grupo Acme</td>
+            </tr>
+            <tr>
+              <td><strong>Empresa</strong></td>
+              <td>Entidade jurídica identificada por CNPJ e razão social. Pertence a um grupo e pode ter um ou mais contratos de previdência.</td>
+              <td>Acme Tecnologia Ltda (CNPJ: 12.345.678/0001-99)</td>
+            </tr>
+            <tr>
+              <td><strong>Contrato</strong></td>
+              <td>Contrato de previdência vinculado a uma empresa. Possui número próprio (8 dígitos) e tipo de dedução fiscal (PGBL/VGBL). É a unidade base do faturamento — cada prévia é gerada por contrato.</td>
+              <td>Contrato 00012345 (PGBL)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Impacto nas demais funcionalidades</div>
+        <p>A hierarquia Grupo &gt; Empresa &gt; Contrato permeia todo o Portal. O faturamento é organizado por empresa (com prévias geradas por contrato), as permissões de acesso dos usuários são definidas com base nos contratos que podem visualizar, e as configurações de ciclo de faturamento, mínimos de contribuição e contrapartida são aplicadas no nível da empresa — afetando todos os contratos vinculados.</p>
+      </div>
+
+      <h2>Navegando por grupos e empresas</h2>
+      <p>No menu lateral do Portal, acesse <strong>Configurações &gt; Grupos e empresas</strong> para visualizar a estrutura de clientes cadastrados.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Selecione um grupo</h4>
+            <p>A tela inicial exibe a lista de todos os grupos disponíveis para o seu perfil. Use o campo <strong>"Pesquisar por grupo"</strong> para filtrar pelo nome.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Visualize as empresas do grupo</h4>
+            <p>Ao clicar em um grupo, o sistema exibe a lista de empresas vinculadas, com <strong>razão social</strong>, <strong>CNPJ</strong> e ações disponíveis.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Acesse as configurações da empresa</h4>
+            <p>Na coluna <strong>Ações</strong>, clique no ícone de <strong>visualização</strong> (olho) para consultar as configurações ou no ícone de <strong>edição</strong> (lápis) para modificá-las.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-image">
+        <img src="../Imagens/grupos_e_empresas_lista.png" alt="Lista de grupos no menu Configurações > Grupos e empresas" />
+        <div class="doc-image-caption">Tela de Grupos e empresas — lista de grupos cadastrados com campo de busca. Cada grupo pode ser clicado para exibir suas empresas vinculadas.</div>
+      </div>
+
+      <div class="doc-image">
+        <img src="../Imagens/empresas_lista.png" alt="Lista de empresas de um grupo com razão social, CNPJ e ações" />
+        <div class="doc-image-caption">Lista de empresas de um grupo, exibindo razão social, CNPJ e ações disponíveis (visualizar/editar). O botão "Editar selecionadas" permite editar configurações de múltiplas empresas simultaneamente.</div>
+      </div>
+
+      <h2>Visualizando configurações</h2>
+      <p>Ao clicar no ícone de visualização (olho) de uma empresa, um painel lateral exibe um resumo das configurações atuais:</p>
+      <ul>
+        <li><strong>Faturamento</strong> — ciclo de faturamento (dia de início, prazo para emissão, dia de vencimento), início automático do ciclo</li>
+        <li><strong>Mínimos de contribuição</strong> — se há valor mínimo configurado e qual a modalidade (por certificado ou por tipo de conta)</li>
+        <li><strong>Contrapartida</strong> — se há regra de partida e contrapartida ativa</li>
+        <li><strong>Responsáveis por faturamento</strong> — colaboradores Icatu designados (primário e secundário)</li>
+        <li><strong>Contatos</strong> — informações de contato da empresa para o "Fale Conosco"</li>
+      </ul>
+
+      <div class="doc-image">
+        <img src="../Imagens/visualizar_configuracoes_empresa.png" alt="Painel lateral com resumo das configurações da empresa" />
+        <div class="doc-image-caption">Painel de visualização rápida das configurações de uma empresa: ciclo de faturamento, mínimos, contrapartida, responsáveis e contatos.</div>
+      </div>
+
+      <h2>Editando configurações</h2>
+      <p>Ao clicar no ícone de edição (lápis), o sistema abre a página completa de <strong>Editar configurações</strong>. Nesta tela é possível alterar todas as parametrizações da empresa: ciclo de faturamento, mínimos de contribuição, contrapartida, responsáveis, destinatários de notificações e contatos do Fale Conosco.</p>
+      <p>Consulte as seções <a href="#ciclo-faturamento">Ciclo de faturamento</a> e <a href="#notificacoes">Notificações</a> para detalhes sobre cada campo.</p>
+      <p>Após realizar as alterações, clique em <strong>"Atualizar configurações"</strong> para salvar. Para desfazer, clique em <strong>"Descartar edições"</strong>.</p>
+
+      <div class="doc-image">
+        <img src="../Imagens/editar_configuracoes_empresa.png" alt="Formulário completo de edição de configurações da empresa" />
+        <div class="doc-image-caption">Página de edição de configurações com todos os campos: Ciclo de Faturamento, Mínimos de contribuição, Contrapartida, Responsáveis, Notificações e Contatos do Fale Conosco.</div>
+      </div>
+
+      <h2>Edição em lote</h2>
+      <p>É possível editar configurações de <strong>múltiplas empresas ao mesmo tempo</strong>. Na lista de empresas, selecione as desejadas usando os checkboxes e clique em <strong>"Editar selecionadas"</strong>. O formulário de edição será aplicado a todas as empresas selecionadas simultaneamente.</p>
+
+      <h2>Permissões</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Ação</th><th>Perfis permitidos</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Visualizar grupos e empresas</strong></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">filial-icatu</span> <span class="tag tag-insurer">analista-icatu</span> <span class="tag tag-company">admin-empresa</span> <span class="tag tag-company">analista-empresa</span> <span class="tag tag-company">parceiro-empresa</span></td>
+            </tr>
+            <tr>
+              <td><strong>Editar configurações</strong></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">filial-icatu</span> <span class="tag tag-insurer">analista-icatu</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Cadastro de novos grupos e empresas</div>
+        <p><strong>Não é possível</strong> cadastrar novos Grupos ou Empresas diretamente pelo Portal. O sistema permite apenas a visualização e edição de configurações de clientes já existentes. Para solicitar a inclusão de um novo cliente, entre em contato pelo email <strong><a href="mailto:atendimento@onze.com.br">atendimento@onze.com.br</a></strong>.</p>
+      </div>
+
+      <h2>Visibilidade e escopo de acesso</h2>
+      <p>Cada usuário enxerga apenas os grupos, empresas e contratos aos quais tem permissão de acesso:</p>
+      <ul>
+        <li><strong>Usuários Icatu com acesso universal (<code>*</code>)</strong> — visualizam todos os grupos e empresas do Portal.</li>
+        <li><strong>Usuários Icatu de filial</strong> — visualizam apenas os grupos e empresas da sua filial regional, conforme mapeamento do SSO.</li>
+        <li><strong>Usuários RH</strong> — visualizam apenas os grupos, empresas e contratos definidos no momento do convite (veja <a href="#convidar-membro">Convidar membro</a>).</li>
+      </ul>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Dica para suporte</div>
+        <p>Quando um usuário RH relatar que não consegue ver determinada empresa ou contrato, verifique o <strong>escopo de acesso</strong> definido no convite. Para ampliar o acesso, é necessário editar o usuário em <a href="#convidar-membro">Configurações &gt; Usuários do portal</a>.</p>
+      </div>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- CICLO DE FATURAMENTO                                         -->
+    <!-- ============================================================ -->
+    <article id="ciclo-faturamento" class="page">
+      <h1>Ciclo de faturamento</h1>
+      <p class="page-subtitle">Configurações que determinam como o faturamento é iniciado, processado e cobrado para cada empresa.</p>
+
+      <p>As configurações de ciclo de faturamento são definidas <strong>por empresa</strong>, na tela <strong>Configurações &gt; Grupos e empresas &gt; Editar configurações</strong>. Elas determinam prazos, regras de contribuição e responsáveis pelo acompanhamento do faturamento. Todos os contratos vinculados à empresa herdam essas configurações.</p>
+
+      <h2>Visão geral dos parâmetros</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Parâmetro</th><th>Tipo</th><th>Descrição resumida</th><th>Onde impacta</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Dia de início do ciclo</strong></td><td>Dia do mês (1–31)</td><td>Dia em que o ciclo de faturamento começa</td><td>Abertura automática de tickets, referência de prazo</td></tr>
+            <tr><td><strong>Prazo para emissão da fatura</strong></td><td>Dias (1–31)</td><td>Número de dias para emissão da fatura</td><td>Cálculo do prazo de emissão</td></tr>
+            <tr><td><strong>Dia de vencimento</strong></td><td>Dia do mês (1–31)</td><td>Dia em que a fatura vence</td><td>Boleto e demonstrativo do kit de faturamento</td></tr>
+            <tr><td><strong>Início automático do ciclo</strong></td><td>Sim / Não</td><td>Se habilitado, o sistema cria o ticket regular automaticamente</td><td>Abertura mensal do faturamento</td></tr>
+            <tr><td><strong>Mínimos de contribuição</strong></td><td>Configuração</td><td>Valor mínimo por certificado ou por tipo de conta</td><td>Geração de críticas <code>CI2</code> e <code>CI6</code></td></tr>
+            <tr><td><strong>Contrapartida</strong></td><td>Configuração</td><td>Regra de partida e contrapartida entre tipos de conta</td><td>Geração de crítica <code>CI1</code></td></tr>
+            <tr><td><strong>Responsáveis</strong></td><td>Usuários Icatu</td><td>Colaboradores Icatu responsáveis pelo faturamento</td><td>Gestão, filtros e acompanhamento</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Dia de início do ciclo</h2>
+      <p>Define o <strong>dia do mês</strong> (1 a 31) em que o ciclo de faturamento da empresa começa. Esse valor é utilizado como referência para:</p>
+      <ul>
+        <li>A <strong>abertura automática</strong> de tickets regulares (quando habilitada)</li>
+        <li>O cálculo dos <strong>prazos</strong> das etapas do fluxo de faturamento</li>
+      </ul>
+      <p>Exemplo: se o dia de início é <strong>18</strong>, o sistema considera que o faturamento daquele mês deve ser iniciado no dia 18.</p>
+
+      <h2>Prazo para emissão da fatura</h2>
+      <p>Define o <strong>número de dias</strong> disponíveis para a emissão da fatura após a conclusão do processamento. Esse prazo é utilizado para calcular a data limite em que a fatura precisa ser emitida no sistema da Icatu.</p>
+      <p>Exemplo: se o prazo é <strong>6</strong>, a equipe Icatu tem 6 dias a partir do processamento para concluir a emissão.</p>
+
+      <h2>Dia de vencimento</h2>
+      <p>Define o <strong>dia do mês</strong> (1 a 31) em que a fatura vence. Esse valor é utilizado na geração do boleto e dos demonstrativos que compõem o kit de faturamento disponibilizado para a empresa.</p>
+      <p>Exemplo: se o dia de vencimento é <strong>12</strong>, o boleto gerado terá vencimento no dia 12 do mês correspondente.</p>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Relação entre os parâmetros</div>
+        <p>Os três parâmetros de prazo trabalham em conjunto. Considere o exemplo: início no dia <strong>18</strong>, prazo de emissão de <strong>6 dias</strong> e vencimento no dia <strong>12</strong>. Isso significa que o faturamento começa no dia 18 do mês corrente, a fatura deve ser emitida dentro de 6 dias após o processamento, e o boleto terá vencimento no dia 12 (tipicamente do mês seguinte). Configure esses valores de forma coerente para garantir que a empresa tenha tempo hábil para o pagamento.</p>
+      </div>
+
+      <h2>Início automático do ciclo</h2>
+      <p>Quando habilitado, o sistema <strong>cria automaticamente</strong> um ticket de faturamento regular para a empresa no dia de início do ciclo configurado.</p>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Como funciona a abertura automática</div>
+        <p>Todos os dias, o sistema executa um processo agendado que verifica quais empresas possuem <strong>início automático habilitado</strong> e cujo <strong>dia de início do ciclo</strong> corresponde ao dia atual. Para cada empresa elegível, um ticket de faturamento regular é criado automaticamente com todos os contratos vinculados. O ticket segue o fluxo normal: geração de prévias, pré-validação, validação RH, e assim por diante.</p>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Quando não habilitar</div>
+        <p>Empresas que necessitam de controle manual sobre o início do faturamento devem manter o início automático <strong>desabilitado</strong>. Nesse caso, os tickets regulares precisam ser criados manualmente por um usuário Icatu (veja <a href="#abertura-ticket">Abertura de ticket</a>).</p>
+      </div>
+
+      <h2>Mínimos de contribuição</h2>
+      <p>Define se a empresa exige um <strong>valor mínimo de contribuição</strong> para que um certificado ou tipo de conta seja incluído no faturamento. Quando habilitado, há duas modalidades disponíveis:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Modalidade</th><th>Como funciona</th><th>Crítica gerada</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Mínimo por certificado</strong></td>
+              <td>Cada certificado individualmente deve atingir o valor mínimo de contribuição configurado para o seu tipo de conta. Se o valor informado na prévia for inferior ao mínimo, o sistema gera uma crítica.</td>
+              <td><code>CI2</code> — Certificado com valor de contribuição abaixo do mínimo</td>
+            </tr>
+            <tr>
+              <td><strong>Mínimo por tipo de conta (somatório)</strong></td>
+              <td>O <strong>somatório</strong> dos valores de contribuição de todos os certificados de um mesmo tipo de conta deve atingir o valor mínimo. Se o total acumulado for inferior, o sistema gera uma crítica.</td>
+              <td><code>CI6</code> — Somatório do valor total de contribuição neste tipo de conta está abaixo do mínimo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>A opção <strong>"Configurações avançadas de contribuição"</strong> permite definir valores mínimos diferentes para cada tipo de conta (ex.: um mínimo para contas do participante e outro para contas da empresa). Quando desabilitada, o mesmo valor mínimo se aplica a todos os tipos.</p>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Impacto no faturamento</div>
+        <p>Certificados ou tipos de conta que não atingem o mínimo configurado geram <strong>críticas obrigatórias</strong> que devem ser resolvidas antes que o faturamento possa avançar. A resolução típica é <strong>descartar</strong> a linha do faturamento ou corrigir o valor na prévia com um novo upload. Consulte <a href="#resolucao-criticas">Resolução de críticas</a> para mais detalhes.</p>
+      </div>
+
+      <h2>Contrapartida</h2>
+      <p>A contrapartida define a <strong>regra de custeio</strong> entre tipos de conta vinculados. Quando habilitada, o sistema verifica se cada colaborador possui contribuições tanto na <strong>partida</strong> (ex.: conta do participante) quanto na <strong>contrapartida</strong> (ex.: conta da empresa), conforme o mapeamento configurado.</p>
+      <p>Se um colaborador possuir contribuição em um tipo de conta (partida) mas não no tipo vinculado (contrapartida), o sistema gera a crítica <code>CI1</code> — "Colaborador sem relação de partida e contrapartida".</p>
+
+      <h3>Exemplo prático</h3>
+      <p>Se a regra de contrapartida vincular o tipo de conta <strong>"Participante Básico"</strong> ao tipo <strong>"Empresa Básico"</strong>, e um colaborador enviar contribuição apenas na conta de participante sem a correspondente contribuição da empresa, o sistema apontará a crítica CI1 para esse colaborador.</p>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Configurações avançadas de contrapartida</div>
+        <p>A opção <strong>"Configurações avançadas de contrapartida"</strong> permite definir os mapeamentos específicos entre tipos de conta partida e contrapartida. Essa parametrização varia conforme o plano de previdência da empresa e deve refletir as regras contratuais de custeio.</p>
+      </div>
+
+      <h2>Responsáveis</h2>
+      <p>Define os <strong>colaboradores Icatu</strong> responsáveis pelo acompanhamento do faturamento da empresa:</p>
+      <ul>
+        <li><strong>Responsável primário</strong> — principal ponto de contato e responsável pela gestão do faturamento da empresa</li>
+        <li><strong>Responsável secundário</strong> — apoio e backup do responsável primário</li>
+      </ul>
+      <p>Os responsáveis são exibidos na coluna <strong>"Responsáveis"</strong> da lista de faturamentos e podem ser utilizados como filtro para facilitar a gestão no dia a dia.</p>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Obrigatoriedade</div>
+        <p>É obrigatório definir pelo menos um <strong>responsável primário</strong> para cada empresa. O responsável secundário é opcional, mas recomendado para garantir continuidade no acompanhamento.</p>
+      </div>
+
+      <h2>Contatos do Fale Conosco</h2>
+      <p>Na seção <strong>"Contatos do Fale conosco (apenas Icatu)"</strong> do formulário de edição, é possível definir informações de contato da empresa que são exibidas para os usuários no Portal:</p>
+      <ul>
+        <li><strong>Contato principal</strong> — nome, email e telefone do contato principal da empresa</li>
+        <li><strong>Contato alternativo</strong> — dados de um contato secundário para redundância</li>
+      </ul>
+      <p>Esses contatos são utilizados na funcionalidade "Fale Conosco" e são visíveis apenas para usuários Icatu, facilitando o contato com a empresa quando necessário.</p>
+
+      <h2>Quem pode editar</h2>
+      <p>As configurações de ciclo de faturamento são editáveis <strong>apenas por usuários Icatu</strong>:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Ação</th><th>Perfis permitidos</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Editar configurações de faturamento</strong></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">filial-icatu</span> <span class="tag tag-insurer">analista-icatu</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Usuários RH <strong>não podem</strong> alterar as configurações de faturamento. Caso o RH precise solicitar alteração em algum parâmetro (ex.: dia de vencimento, mínimos de contribuição), a solicitação deve ser feita ao responsável Icatu da empresa.</p>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- NOTIFICAÇÕES                                                 -->
+    <!-- ============================================================ -->
+    <article id="notificacoes" class="page">
+      <h1>Notificações</h1>
+      <p class="page-subtitle">Mapa completo dos alertas automáticos do Portal, seus gatilhos, destinatários e como configurar os emails de recebimento.</p>
+
+      <p>O Portal de Faturamento envia notificações automáticas por <strong>email</strong> e pelo <strong>painel de notificações do portal</strong> (ícone de sino no cabeçalho). Os alertas são disparados em momentos-chave do fluxo de faturamento para manter todos os envolvidos informados sobre o andamento de cada etapa.</p>
+
+      <h2>Mapa de alertas</h2>
+      <p>A tabela abaixo lista todos os alertas automáticos configurados no Portal, o evento que dispara cada um, os perfis que recebem e os canais de entrega.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Alerta</th>
+              <th>Gatilho</th>
+              <th>Destinatários</th>
+              <th>Canais</th>
+              <th>Resumo do conteúdo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ticket aberto</strong></td>
+              <td>Um novo ticket de faturamento é criado (manual ou automático)</td>
+              <td><span class="tag tag-insurer">Icatu operacional</span> <span class="tag tag-insurer">Icatu comercial</span></td>
+              <td>Portal + Email</td>
+              <td>Informa que um novo faturamento foi aberto para o grupo/empresa, com a competência e contratos envolvidos.</td>
+            </tr>
+            <tr>
+              <td><strong>Validação RH</strong></td>
+              <td>As prévias foram geradas e o faturamento está disponível para validação pela empresa</td>
+              <td><span class="tag tag-company">Empresa / RH</span></td>
+              <td>Portal + Email</td>
+              <td>Notifica o RH de que há um faturamento aguardando análise e envio das prévias validadas.</td>
+            </tr>
+            <tr>
+              <td><strong>Em processamento</strong></td>
+              <td>O RH enviou o faturamento para a Icatu (ou a Icatu puxou o ticket)</td>
+              <td><span class="tag tag-insurer">Icatu operacional</span></td>
+              <td>Portal</td>
+              <td>Informa que o faturamento está disponível para análise e processamento pela equipe Icatu.</td>
+            </tr>
+            <tr>
+              <td><strong>Kit disponível</strong></td>
+              <td>O kit de faturamento (boletos e demonstrativos) está pronto para download</td>
+              <td><span class="tag tag-insurer">Icatu operacional</span> <span class="tag tag-company">Empresa / RH</span> <span class="tag tag-insurer">Icatu comercial</span></td>
+              <td>Portal + Email</td>
+              <td>Notifica que o kit está disponível. A empresa deve baixar os documentos para providenciar o pagamento.</td>
+            </tr>
+            <tr>
+              <td><strong>Novo comentário</strong></td>
+              <td>Um novo comentário é adicionado ao ticket de faturamento</td>
+              <td><span class="tag tag-insurer">Icatu operacional</span> <span class="tag tag-company">Empresa / RH</span> <span class="tag tag-insurer">Icatu comercial</span></td>
+              <td>Portal + Email</td>
+              <td>Notifica os envolvidos de que há um novo comentário no ticket, identificando o autor da mensagem.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Alerta "Em processamento" — somente no portal</div>
+        <p>O alerta de <strong>"Em processamento"</strong> é enviado <strong>apenas como notificação no portal</strong>, sem envio de email. Isso porque o evento é de interesse operacional interno da Icatu, que já acompanha o fluxo diretamente pela interface.</p>
+      </div>
+
+      <h2>Configuração de destinatários por email</h2>
+      <p>Os emails que receberão as notificações são configurados <strong>por empresa</strong>, na tela <strong>Configurações &gt; Grupos e empresas &gt; Editar configurações</strong>, na seção <strong>"Notificações"</strong>. Existem três grupos de destinatários:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Grupo de destinatários</th><th>Descrição</th><th>Alertas que recebe por email</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Alertas destinados à empresa / RH</strong></td>
+              <td>Emails dos contatos da empresa (RH) que devem receber notificações sobre o faturamento.</td>
+              <td>Validação RH, Kit disponível, Novo comentário</td>
+            </tr>
+            <tr>
+              <td><strong>Alertas destinados ao time comercial (Icatu)</strong></td>
+              <td>Emails dos responsáveis comerciais da Icatu que acompanham o cliente.</td>
+              <td>Ticket aberto, Kit disponível, Novo comentário</td>
+            </tr>
+            <tr>
+              <td><strong>Alertas destinados ao operacional (Icatu)</strong></td>
+              <td>Emails da equipe operacional da Icatu responsável pelo processamento do faturamento.</td>
+              <td>Ticket aberto, Kit disponível, Novo comentário</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Emails independentes do login</div>
+        <p>Os emails configurados na seção de Notificações <strong>não precisam ser de usuários cadastrados no Portal</strong>. Qualquer endereço de email pode ser adicionado como destinatário — isso permite incluir gestores, equipes de apoio ou caixas compartilhadas que não necessariamente acessam o Portal.</p>
+      </div>
+
+      <h2>Notificações no portal</h2>
+      <p>Além dos emails, o Portal exibe notificações na interface, acessíveis pelo <strong>ícone de sino</strong> no canto superior direito do cabeçalho. As notificações no portal são entregues individualmente para cada usuário com base no seu <strong>perfil</strong> e nos <strong>contratos</strong> aos quais tem acesso.</p>
+      <ul>
+        <li>O <strong>sino</strong> exibe um indicador com a quantidade de notificações não lidas</li>
+        <li>Ao clicar, o painel lista as notificações recentes com título, resumo e data</li>
+        <li>É possível marcar notificações como lidas individualmente ou todas de uma vez</li>
+      </ul>
+
+      <h2>Conteúdo dos emails</h2>
+      <p>Os emails de notificação seguem um template padronizado e incluem as seguintes informações dinâmicas:</p>
+      <ul>
+        <li><strong>Competência</strong> — mês/ano de referência do faturamento</li>
+        <li><strong>Grupo e CNPJ</strong> — identificação do grupo e empresa</li>
+        <li><strong>Contratos</strong> — lista dos contratos envolvidos no faturamento</li>
+        <li><strong>Autor</strong> — nome do autor (em alertas de novo comentário)</li>
+        <li><strong>Link de acesso</strong> — botão que direciona o destinatário diretamente para o ticket no Portal</li>
+      </ul>
+
+      <h2>Quem pode configurar</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Ação</th><th>Perfis permitidos</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Configurar emails de destinatários</strong></td>
+              <td><span class="tag tag-insurer">admin-icatu</span> <span class="tag tag-insurer">filial-icatu</span> <span class="tag tag-insurer">analista-icatu</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Usuários RH <strong>não podem</strong> alterar os destinatários de notificação. Para solicitar alteração, o RH deve entrar em contato com o responsável Icatu da empresa.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Boas práticas</div>
+        <ul>
+          <li>Mantenha os emails atualizados — destinatários desatualizados podem causar atrasos na operação por falta de visibilidade.</li>
+          <li>Inclua pelo menos dois emails no grupo <strong>"empresa / RH"</strong> para garantir redundância.</li>
+          <li>Para o time <strong>comercial da Icatu</strong>, inclua o email do executivo de contas responsável pelo cliente.</li>
+          <li>Use caixas compartilhadas (ex.: <code>faturamento@empresa.com.br</code>) quando possível, para evitar dependência de um único colaborador.</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-title">Dica para suporte</div>
+        <p>Se um usuário RH reportar que não está recebendo emails de notificação, verifique: (1) se o email está cadastrado nos destinatários da empresa em <strong>Configurações &gt; Grupos e empresas &gt; Editar configurações &gt; Notificações</strong>; (2) se o email não está caindo na caixa de spam; (3) se o alerta esperado realmente envia email para o grupo "empresa / RH" (o alerta "Em processamento", por exemplo, é enviado apenas no portal).</p>
+      </div>
+    </article>
+
+    </div><!-- /.main -->
+
+    <aside class="toc" id="toc">
+      <div class="toc-inner">
+        <div class="toc-title">Nesta página</div>
+        <ul class="toc-list" id="toc-list"></ul>
+      </div>
+    </aside>
+
+  </div><!-- /.layout-inner -->
+</div><!-- /.layout -->
+
+<script src="script.js"></script>
+</body>
+</html>
